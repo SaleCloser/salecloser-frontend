@@ -14,11 +14,15 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  /**  useEffect(() => {
     setTimeout(() => {
       setIsAuthenticated(false);
       setIsLoading(false);
     }, 1500);
-  }, []);
+  }, []); */
 
   const value = useMemo<AuthContextValue>(
     () => ({

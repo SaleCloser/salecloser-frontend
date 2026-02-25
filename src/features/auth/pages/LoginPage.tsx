@@ -1,9 +1,9 @@
-import React from "react";
+import LoginForm from "../components/forms/LoginForm";
 
 const LoginPage = () => {
   return (
-    <div className="h-screen w-full text-black flex justify-center items-center font-bold text-9xl">
-      LoginPage
+    <div className="bg-bg-secondary h-screen w-full  flex items-center justify-center p-2">
+      <LoginForm />
     </div>
   );
 };

@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Dark mode via .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Theme mapping ───────────────────────────── */
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  /* Input tokens — usable as Tailwind utilities */
+  --color-input-bg: var(--input-bg);
+  --color-input-bg-filled: var(--input-bg-filled);
+  --color-input-border: var(--input-border);
+  --color-input-border-focus: var(--input-border-focus);
+  --color-input-border-error: var(--input-border-error);
+  --color-input-border-success: var(--input-border-success);
+}
+
+/* ─── Base layer ───────────────────────────────── */
+@layer base {
+  :root,
+  .light {
+    /* LIGHT */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+
+    /* ─ Input ─ */
+    --input-bg: #ffffff;
+    --input-bg-filled: #f3f4f6;
+    --input-bg-ghost: #f9fafb;
+    --input-border: #e2e4e9;
+    --input-border-hover: #c4c8d4;
+    --input-border-focus: #6366f1;
+    --input-border-error: #ef4444;
+    --input-border-success: #22c55e;
+    --input-ring: rgba(99, 102, 241, 0.14);
+    --input-ring-error: rgba(239, 68, 68, 0.12);
+    --input-ring-success: rgba(34, 197, 94, 0.12);
+    --input-placeholder: #b0b6c3;
+    --input-icon: #9ca3af;
+    --input-icon-focus: #6366f1;
+    --input-label: #374151;
+    --input-helper: #6b7280;
+    --input-counter: #9ca3af;
+  }
+
+  .dark {
+    /* DARK */
+    --bg-primary: #1a1c1e;
+    --bg-secondary: #252729;
+
+    --text-primary: #bebfbf;
+    --text-secondary: #7a8e88;
+
+    /* ─ Input ─ */
+    --input-bg: #1e2023;
+    --input-bg-filled: #252729;
+    --input-bg-ghost: #252729;
+    --input-border: #2e3238;
+    --input-border-hover: #42474f;
+    --input-border-focus: #818cf8;
+    --input-border-error: #f87171;
+    --input-border-success: #4ade80;
+    --input-ring: rgba(129, 140, 248, 0.14);
+    --input-ring-error: rgba(248, 113, 113, 0.14);
+    --input-ring-success: rgba(74, 222, 128, 0.14);
+    --input-placeholder: #3a4048;
+    --input-icon: #52585e;
+    --input-icon-focus: #818cf8;
+    --input-label: #9ca3af;
+    --input-helper: #6b7280;
+    --input-counter: #52585e;
+  }
+}
